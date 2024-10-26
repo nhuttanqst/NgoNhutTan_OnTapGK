@@ -1,6 +1,5 @@
 import React, { createContext, useState } from "react";
 
-// Tạo context cho giỏ hàng
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
@@ -41,8 +40,14 @@ export const CartProvider = ({ children }) => {
     });
   };
 
+  const removeAllItemsFromCart = () => {
+    setCartItems([]);
+  };
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
+    <CartContext.Provider
+      value={{ cartItems, addToCart, removeFromCart, removeAllItemsFromCart }}
+    >
       {children}
     </CartContext.Provider>
   );

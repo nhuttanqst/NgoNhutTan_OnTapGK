@@ -18,7 +18,8 @@ import { CartContext } from "../contexts/CartContext";
 import Ionicons from "@expo/vector-icons/Ionicons";
 
 const CartScreen = () => {
-  const { cartItems, removeFromCart, addToCart } = useContext(CartContext);
+  const { cartItems, removeFromCart, addToCart, removeAllItemsFromCart } =
+    useContext(CartContext);
   const [modalVisible, setModalVisible] = useState(false);
   const [itemToRemove, setItemToRemove] = useState(null);
   const [loginError, setLoginError] = useState("");
@@ -62,6 +63,9 @@ const CartScreen = () => {
       [
         {
           text: "OK",
+          onPress: () => {
+            removeAllItemsFromCart();
+          },
         },
       ],
       { cancelable: false }
