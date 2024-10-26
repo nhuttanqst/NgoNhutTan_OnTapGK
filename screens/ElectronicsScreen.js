@@ -36,10 +36,10 @@ export default function ElectronicsScreen() {
     const fetchData = async () => {
       try {
         const categoriesResponse = await axios.get(
-          "https://671168cf4eca2acdb5f4c2fe.mockapi.io/categoriesOfElectronic"
+          "https://637f1c9c5b1cc8d6f93aca6d.mockapi.io/categoriesOfElectronic"
         );
         const productsResponse = await axios.get(
-          "https://671168cf4eca2acdb5f4c2fe.mockapi.io/productsOfElectronics"
+          "https://637f1c9c5b1cc8d6f93aca6d.mockapi.io/productsOfElectronics"
         );
         setCategories(categoriesResponse.data);
         setProducts(productsResponse.data);
