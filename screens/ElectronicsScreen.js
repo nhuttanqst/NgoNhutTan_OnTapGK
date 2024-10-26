@@ -88,7 +88,6 @@ export default function ElectronicsScreen() {
   };
 
   const handleProductPress = (item) => {
-    // Lấy 4 sản phẩm đầu tiên cùng loại
     const relatedProducts = filteredProducts
       .filter((product) => product.name === item.name)
       .slice(0, 4);
