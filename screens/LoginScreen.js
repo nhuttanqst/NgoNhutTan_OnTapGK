@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
     backgroundColor: "#fff",
-    justifyContent: "flex-start", // Ensure elements start from the top
+    justifyContent: "flex-start",
   },
   backIcon: {
     position: "absolute",
